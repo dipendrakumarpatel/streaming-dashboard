@@ -14,10 +14,8 @@ export default function MovieRow({ movies, categoryTitle }: MovieRowProps) {
       <h3 className="text-lg font-semibold">{categoryTitle}</h3>
       <div className="flex gap-3 overflow-x-auto py-4">
         {movies.map(m => (
-          <Link key={m.id} href={`/movie/${m.id}`}>
-            <a className="min-w-[150px] block">
-              <Image src={`https://image.tmdb.org/t/p/w342${m.poster_path}`} alt={m.title} width={200} height={300} />
-            </a>
+          <Link key={m.id} href={`/movie/${m.id}`} className="min-w-[150px] block">
+            <Image src={`https://image.tmdb.org/t/p/w342${m.poster_path}`} alt={m.title} width={200} height={300} />
           </Link>
         ))}
       </div>

@@ -10,7 +10,7 @@ interface MovieCardProps {
 
 export default function MovieCard({ movie }: MovieCardProps) {
   return (
-    <Link href={`/movie/${movie.id}`} className="block">
+    <Link href={`/movie/${movie.id}`}>
       <div className="relative w-48 cursor-pointer transition-transform duration-200 hover:scale-105 group">
         <Image
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
